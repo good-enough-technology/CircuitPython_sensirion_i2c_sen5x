@@ -227,8 +227,10 @@ class Sen5xI2cCmdReadDataReady(Sen5xI2cCmdBase):
         checked_data = Sen5xI2cCmdBase.interpret_response(self, data)
 
         # convert raw received data into proper data types
-        padding = int(unpack(">B", checked_data[0:1])[0])  # uint8
-        data_ready = bool(unpack(">?", checked_data[1:2])[0])  # bool
+        # circuitpython compatible version:
+        padding, data_ready = checked_data[0], bool(checked_data[1])  
+        # padding = int(unpack(">B", checked_data[0:1])[0])  # uint8
+        # data_ready = bool(unpack(">?", checked_data[1:2])[0])  # bool
         return padding, \
             data_ready
 
