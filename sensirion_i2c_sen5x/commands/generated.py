@@ -25,8 +25,15 @@
 from sensirion_i2c_driver import SensirionI2cCommand, CrcCalculator
 from struct import pack, unpack
 
-import logging
+from adafruit_platformdetect import Detector
+detector = Detector()
+if detector.board.any_embedded_linux:
+    import logging
+else:
+    import adafruit_logging as logging
+
 log = logging.getLogger(__name__)
+
 
 
 class Sen5xI2cCmdBase(SensirionI2cCommand):

@@ -15,8 +15,15 @@ from ..measured_values import Sen5xMeasuredValues
 from ..response_types import Sen5xDeviceStatus, Sen5xFirmwareVersion, \
     Sen5xHardwareVersion, Sen5xProtocolVersion, Sen5xVersion
 
-import logging
+from adafruit_platformdetect import Detector
+detector = Detector()
+if detector.board.any_embedded_linux:
+    import logging
+else:
+    import adafruit_logging as logging
+
 log = logging.getLogger(__name__)
+
 
 
 class Sen5xI2cCmdReadDataReady(ReadDataReadyGenerated):

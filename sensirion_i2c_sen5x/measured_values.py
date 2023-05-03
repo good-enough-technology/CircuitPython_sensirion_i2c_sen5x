@@ -4,8 +4,15 @@
 from .response_types import Sen5xMassConcentration, Sen5xHumidity, \
     Sen5xTemperature, Sen5xAirQualityIndex
 
-import logging
+from adafruit_platformdetect import Detector
+detector = Detector()
+if detector.board.any_embedded_linux:
+    import logging
+else:
+    import adafruit_logging as logging
+
 log = logging.getLogger(__name__)
+
 
 
 class Sen5xMeasuredValues:

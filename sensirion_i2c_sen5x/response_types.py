@@ -1,7 +1,13 @@
 # -*- coding: utf-8 -*-
 # (c) Copyright 2022 Sensirion AG, Switzerland
 
-import logging
+from adafruit_platformdetect import Detector
+detector = Detector()
+if detector.board.any_embedded_linux:
+    import logging
+else:
+    import adafruit_logging as logging
+
 log = logging.getLogger(__name__)
 
 
