@@ -21,7 +21,7 @@
 
 # flake8: noqa
 
-from __future__ import absolute_import, division, print_function
+# from __future__ import absolute_import, division, print_function
 from sensirion_i2c_driver import SensirionI2cCommand, CrcCalculator
 from struct import pack, unpack
 
