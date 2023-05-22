@@ -4,6 +4,11 @@ This repository contains the Python driver to communicate with Sensirion
 SEN5x sensors using the I²C interface. For details, please read the
 package description in [README.rst](README.rst).
 
+## Attribution ** FORK **
+
+This library is a fork of the official python library from Sensirion, to 
+add support for CircuitPython on embedded devices and linux SBCs.
+
 ## Usage
 
 See package description in [README.rst](README.rst) and user manual at
