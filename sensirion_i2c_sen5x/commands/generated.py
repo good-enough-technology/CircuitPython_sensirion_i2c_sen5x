@@ -21,11 +21,16 @@
 
 # flake8: noqa
 
-from __future__ import absolute_import, division, print_function
+# from __future__ import absolute_import, division, print_function
 from sensirion_i2c_driver import SensirionI2cCommand, CrcCalculator
 from struct import pack, unpack
 
-import logging
+import sys
+if sys.implementation.name.lower() == "circuitpython":
+    import adafruit_logging as logging
+else:
+    import logging
+
 log = logging.getLogger(__name__)
 
 

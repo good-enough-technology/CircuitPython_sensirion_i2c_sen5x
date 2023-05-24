@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 # (c) Copyright 2022 Sensirion AG, Switzerland
 
-import logging
+import sys
+if sys.implementation.name.lower() == "circuitpython":
+    import adafruit_logging as logging
+else:
+    import logging
+
 log = logging.getLogger(__name__)
 
 

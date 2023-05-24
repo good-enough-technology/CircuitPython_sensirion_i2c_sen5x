@@ -15,7 +15,12 @@ from ..measured_values import Sen5xMeasuredValues
 from ..response_types import Sen5xDeviceStatus, Sen5xFirmwareVersion, \
     Sen5xHardwareVersion, Sen5xProtocolVersion, Sen5xVersion
 
-import logging
+import sys
+if sys.implementation.name.lower() == "circuitpython":
+    import adafruit_logging as logging
+else:
+    import logging
+
 log = logging.getLogger(__name__)
 
 

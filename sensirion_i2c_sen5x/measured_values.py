@@ -4,7 +4,12 @@
 from .response_types import Sen5xMassConcentration, Sen5xHumidity, \
     Sen5xTemperature, Sen5xAirQualityIndex
 
-import logging
+import sys
+if sys.implementation.name.lower() == "circuitpython":
+    import adafruit_logging as logging
+else:
+    import logging
+
 log = logging.getLogger(__name__)
 
 

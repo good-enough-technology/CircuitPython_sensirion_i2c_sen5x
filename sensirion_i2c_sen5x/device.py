@@ -30,7 +30,12 @@ from .commands import \
     Sen5xI2cCmdStartMeasurementWithoutPm, \
     Sen5xI2cCmdStopMeasurement
 
-import logging
+import sys
+if sys.implementation.name.lower() == "circuitpython":
+    import adafruit_logging as logging
+else:
+    import logging
+
 log = logging.getLogger(__name__)
 
 
