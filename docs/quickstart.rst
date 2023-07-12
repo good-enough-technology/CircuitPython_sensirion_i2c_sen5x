@@ -15,7 +15,7 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
 .. sourcecode:: python
 
     import time
-    from sensirion_i2c_sen5x import Sen5xI2cDevice
+    from sensirion_i2c_sen5x import Sen5xI2cDevice,SEN5X_DEFAULT_ADDRESS
     from sensirion_i2c_driver import I2cTransceiver,I2cConnection
     import board
     
@@ -26,7 +26,7 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
     sen5x_device = Sen5xI2cDevice(I2cConnection(transceiver))
 
     # Perform a device reset (reboot firmware)
-    device.device_reset()
+    sen5x_device.device_reset()
 
     
     sen5x_product = sen5x_device.get_product_name()
@@ -37,15 +37,15 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
 
     
     # Start measurement
-    device.start_measurement()
+    sen5x_device.start_measurement()
     for i in range(20):
         # Wait until next result is available
         print("Waiting for new data...")
-        while device.read_data_ready() is False:
+        while sen5x_device.read_data_ready() is False:
             time.sleep(0.1)
 
         # Read measured values -> clears the "data ready" flag
-        values = device.read_measured_values()
+        values = sen5x_device.read_measured_values()
         print(values)
 
         # Access a specific value separately (see Sen5xMeasuredValues)
@@ -53,11 +53,11 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
         ambient_temperature = values.ambient_temperature.degrees_celsius
 
         # Read device status
-        status = device.read_device_status()
+        status = sen5x_device.read_device_status()
         print("Device Status: {}\n".format(status))
 
     # Stop measurement
-    device.stop_measurement()
+    sen5x_device.stop_measurement()
     print("Measurement stopped.")
 
 
