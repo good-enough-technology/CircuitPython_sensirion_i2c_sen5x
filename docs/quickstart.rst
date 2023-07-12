@@ -15,14 +15,14 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
 .. sourcecode:: python
 
     import time
-    from sensirion_i2c_sen5x import Sen5xI2cDevice,SEN5X_DEFAULT_ADDRESS
+    from sensirion_i2c_sen5x import Sen5xI2cDevice
     from sensirion_i2c_driver import I2cTransceiver,I2cConnection
     import board
     
 
     # setup i2c - see CircuitPython docs, or get from board
     i2c = board.I2C()
-    transceiver = I2cTransceiver(i2c, SEN5X_DEFAULT_ADDRESS)
+    transceiver = I2cTransceiver(i2c)
     sen5x_device = Sen5xI2cDevice(I2cConnection(transceiver))
 
     # Perform a device reset (reboot firmware)
