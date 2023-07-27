@@ -6,7 +6,7 @@ Quick Start
                 time the sensor is powered up.
 
 CircuitPython I²C Bus Example
----------------------
+-----------------------------
 
 Following example code shows how to use this driver with a Sensirion SEN5x
 connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
