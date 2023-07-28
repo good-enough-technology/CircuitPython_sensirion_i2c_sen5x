@@ -28,15 +28,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Uninstall library (continue on failure)
+        run: |
+          if pip uninstall sensirion_i2c_driver -y; then
+            echo "Uninstallation successful or the library was not installed."
+          else
+            echo "Uninstallation failed, but the job will continue."
+          fi
+          if pip uninstall sensirion_i2c_sen5x -y; then
+            echo "Uninstallation successful or the library was not installed."
+          else
+            echo "Uninstallation failed, but the job will continue."
+          fi
+          if pip uninstall markupsafe -y; then
+            echo "Uninstallation successful or the library was not installed."
+          else
+            echo "Uninstallation failed, but the job will continue."
+          fi
       - name: Install Python dependencies
         run: |
           cd ${GITHUB_WORKSPACE}
           git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
-          pip uninstall sensirion_i2c_driver --ignore-installed
-          pip uninstall sensirion_i2c_sen5x --ignore-installed
           pip install ./CircuitPython_sensirion_i2c_driver/
           pip install .
-          pip uninstall markupsafe --ignore-installed
           pip install markupsafe==0.23
       - name: Setup Pages
         uses: actions/configure-pages@v3
