@@ -32,8 +32,12 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}
           git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
+          pip uninstall sensirion_i2c_driver --ignore-installed
+          pip uninstall sensirion_i2c_sen5x --ignore-installed
           pip install ./CircuitPython_sensirion_i2c_driver/
           pip install .
+          pip uninstall markupsafe --ignore-installed
+          pip install markupsafe==0.23
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Sphinx to GitHub Pages
