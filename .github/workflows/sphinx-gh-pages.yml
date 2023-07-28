@@ -19,7 +19,7 @@ permissions:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   # Build job
@@ -28,19 +28,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Python dependencies
+        run: |
+          cd ${GITHUB_WORKSPACE}
+          git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
+          pip install ./CircuitPython_sensirion_i2c_driver/
+          pip install .
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Sphinx to GitHub Pages
       # You may pin to the exact commit or the version.
       # uses: sphinx-notes/pages@f7cabbad7f99057f9617e73ea57b40c5fedb53bc
         uses: sphinx-notes/pages@3.0
-        with:
+        #with:
           # Path to Sphinx source files
           #documentation_path: # optional, default is ./docs
           # Path to requirements file, used in `pip install -r XXX` command
           #requirements_path: # optional, default is ./docs/requirements.txt
           # Extras of Requirement Specifier, used in `pip install .[XXX]` command
-          pyproject_extras: ".." # optional, default is docs
+          #pyproject_extras: ".." # optional, default is docs
           # Version of Python
           #python_version: # optional, default is 3.10
           # Version of Sphinx
