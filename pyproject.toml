@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "circuitpython-sensirion-i2c-sen5x"
+version = "0.1.2"
+description = "A CircuitPython driver for Sensirion SEN5x air quality devices. Fork of original python version by Sensirion."
+authors = ["Tyeth Gundry <tyethgundry@googlemail.com>", "Sensirion AG <info@sensirion.com>"]
+license = "MIT"
+
+# Include URLs relevant to your project
+repository = "https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_sen5x"
+homepage = "https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_sen5x"
+documentation = "https://good-enough-technology.github.io/CircuitPython_sensirion_i2c_sen5x"
+
+#use docs/requirements.txt for documentation dependencies
+
+[circup]
+dependencies = [
+    "adafruit-busio",
+    "circuitPython-sensirion-i2c-driver"
+]

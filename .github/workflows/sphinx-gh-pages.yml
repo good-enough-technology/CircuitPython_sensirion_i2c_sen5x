@@ -1,93 +1,51 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build and Deploy Documentation
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - master  # Replace with your default branch if it's not 'master'
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  # Build job
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Uninstall library (continue on failure)
-        run: |
-          if pip uninstall sensirion_i2c_driver -y; then
-            echo "Uninstallation successful or the library was not installed."
-          else
-            echo "Uninstallation failed, but the job will continue."
-          fi
-          if pip uninstall sensirion_i2c_sen5x -y; then
-            echo "Uninstallation successful or the library was not installed."
-          else
-            echo "Uninstallation failed, but the job will continue."
-          fi
-          if pip uninstall markupsafe -y; then
-            echo "Uninstallation successful or the library was not installed."
-          else
-            echo "Uninstallation failed, but the job will continue."
-          fi
-      - name: Install Python dependencies
-        run: |
-          cd ${GITHUB_WORKSPACE}
-          git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
-          pip install ./CircuitPython_sensirion_i2c_driver/
-          pip install .
-          pip install markupsafe==0.23
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Sphinx to GitHub Pages
-      # You may pin to the exact commit or the version.
-      # uses: sphinx-notes/pages@f7cabbad7f99057f9617e73ea57b40c5fedb53bc
-        uses: sphinx-notes/pages@3.0
-        #with:
-          # Path to Sphinx source files
-          #documentation_path: # optional, default is ./docs
-          # Path to requirements file, used in `pip install -r XXX` command
-          #requirements_path: # optional, default is ./docs/requirements.txt
-          # Extras of Requirement Specifier, used in `pip install .[XXX]` command
-          #pyproject_extras: ".." # optional, default is docs
-          # Version of Python
-          #python_version: # optional, default is 3.10
-          # Version of Sphinx
-          #sphinx_version: # optional, default is 
-          # Enable cache to speed up documentation building
-          #cache: # optional
-          # Additional options passed to sphinx-build
-          #sphinx_build_options: # optional, default is 
-          # Whether to automatically checkout the repository, if false, user need to do it byself
-          #checkout: # optional, default is true
-          # Whether to automatically publish the pages, if false, user need to manually publish by self
-          #publish: # optional, default is true
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+    - name: Checkout Source
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'  # Specify the Python version
+
+    - name: Install Dependencies
+      run: |
+        sudo apt-get install tree
+        python -m pip install --upgrade pip
+        # cd ${GITHUB_WORKSPACE}
+        pip install sphinx sphinx_rtd_theme
+        git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
+        pip install ./CircuitPython_sensirion_i2c_driver/
+        pip install -r docs/requirements.txt
+        # Install any other dependencies here
+
+    - name: Install Package
+      run: |
+        pip install .
+
+    - name: Build Documentation
+      run: |
+        cd docs
+        make html
+        ls _build/html
+        tree _build/html
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        user_name: 'tyeth'
+        user_email: 'tyethgundry@googlemail.com'
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs/_build/html
+

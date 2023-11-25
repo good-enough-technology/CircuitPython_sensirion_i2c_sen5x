@@ -96,7 +96,7 @@ scv_grm_exclude = ('.gitignore', '.nojekyll')
 
 intersphinx_mapping = {
     'sensirion_i2c_driver': (
-        'https://sensirion.github.io/python-i2c-driver/',
+        'https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver/',
         None
     ),
 }

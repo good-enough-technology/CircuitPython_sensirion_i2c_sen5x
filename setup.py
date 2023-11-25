@@ -23,19 +23,19 @@ long_description = readme.strip() + "\n\n" + changelog.strip() + "\n"
 
 
 setup(
-    name='sensirion-i2c-sen5x',
+    name='circuitpython-sensirion-i2c-sen5x',
     version=version_string,
     author='Sensirion',
     author_email='info@sensirion.com',
-    description='I2C Driver for Sensirion SEN5x Sensors',
+    description='I2C Driver for Sensirion SEN5x Sensors. Fork of official python driver.',
     license='BSD',
     keywords='sensirion i2c sen5x sen50 sen54 sen55 driver',
-    url='https://github.com/sensirion/python-i2c-sen5x',
+    url='https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_sen5x',
     packages=find_packages(exclude=['tests', 'tests.*']),
     long_description=long_description,
-    python_requires='>=3.5, <4',
+    python_requires='>=3.5',
     install_requires=[
-        'sensirion-i2c-driver~=1.0.0',
+        'git+https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_sen5x.git',
     ],
     extras_require={
         'test': [
