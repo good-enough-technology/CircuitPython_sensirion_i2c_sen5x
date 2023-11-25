@@ -35,7 +35,7 @@ setup(
     long_description=long_description,
     python_requires='>=3.5',
     install_requires=[
-        'git+https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_sen5x.git',
+        'circuitPython-sensirion-i2c-sen5x',
     ],
     extras_require={
         'test': [
