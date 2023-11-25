@@ -17,7 +17,7 @@ import pkg_resources
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # -- Project information -----------------------------------------------------
-distribution = pkg_resources.get_distribution('sensirion_i2c_sen5x')
+distribution = pkg_resources.get_distribution('circuitpython_sensirion_i2c_sen5x')
 
 project = distribution.project_name
 copyright = u'{} Sensirion AG, Switzerland'.format(datetime.now().year)
