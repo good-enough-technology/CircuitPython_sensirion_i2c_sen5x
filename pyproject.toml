@@ -13,7 +13,7 @@ documentation = "https://good-enough-technology.github.io/CircuitPython_sensirio
 #use docs/requirements.txt for documentation dependencies
 
 [circup]
-dependencies = [
+circup_dependencies = [
     "adafruit-busio",
     "circuitPython-sensirion-i2c-driver"
 ]
