@@ -60,10 +60,6 @@ html_theme = 'sphinx_rtd_theme'
 
 html_favicon = 'favicon.ico'
 
-# Workaround for weirdly formatted function parameters. See https://github.com/readthedocs/sphinx_rtd_theme/issues/766
-html4_writer = True
-
-
 # -- Extension configuration -------------------------------------------------
 
 autodoc_member_order = 'bysource'
