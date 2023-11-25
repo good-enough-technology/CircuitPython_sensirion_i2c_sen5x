@@ -5,6 +5,62 @@ Quick Start
                 select pin must be pulled low to GND before or at the same
                 time the sensor is powered up.
 
+CircuitPython I²C Bus Example
+-----------------------------
+
+Following example code shows how to use this driver with a Sensirion SEN5x
+connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
+
+
+.. sourcecode:: python
+
+    import time
+    from sensirion_i2c_sen5x import Sen5xI2cDevice
+    from sensirion_i2c_driver import I2cTransceiver,I2cConnection
+    import board
+    
+
+    # setup i2c - see CircuitPython docs, or get from board
+    i2c = board.I2C()
+    transceiver = I2cTransceiver(i2c)
+    sen5x_device = Sen5xI2cDevice(I2cConnection(transceiver))
+
+    # Perform a device reset (reboot firmware)
+    sen5x_device.device_reset()
+
+    
+    sen5x_product = sen5x_device.get_product_name()
+    # Print some device information
+    print("Version: {}".format(device.get_version()))
+    print("Product Name: {}".format(device.get_product_name()))
+    print("Serial Number: {}".format(device.get_serial_number()))
+
+    
+    # Start measurement
+    sen5x_device.start_measurement()
+    for i in range(20):
+        # Wait until next result is available
+        print("Waiting for new data...")
+        while sen5x_device.read_data_ready() is False:
+            time.sleep(0.1)
+
+        # Read measured values -> clears the "data ready" flag
+        values = sen5x_device.read_measured_values()
+        print(values)
+
+        # Access a specific value separately (see Sen5xMeasuredValues)
+        mass_concentration = values.mass_concentration_2p5.physical
+        ambient_temperature = values.ambient_temperature.degrees_celsius
+
+        # Read device status
+        status = sen5x_device.read_device_status()
+        print("Device Status: {}\n".format(status))
+
+    # Stop measurement
+    sen5x_device.stop_measurement()
+    print("Measurement stopped.")
+
+
 Linux I²C Bus Example
 ---------------------
 
