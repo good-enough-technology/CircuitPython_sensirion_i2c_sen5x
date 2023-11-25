@@ -85,11 +85,6 @@ def setup(app):
     app.connect('autodoc-skip-member', autodoc_skip_member)
 
 
-# Workaround for "=None" documentation of instance attributes
-# (see https://github.com/sphinx-doc/sphinx/issues/2044)
-sphinx.ext.autodoc.InstanceAttributeDocumenter.add_directive_header = \
-    sphinx.ext.autodoc.ClassLevelDocumenter.add_directive_header
-
 scv_whitelist_branches = ('master',)
 
 scv_grm_exclude = ('.gitignore', '.nojekyll')
