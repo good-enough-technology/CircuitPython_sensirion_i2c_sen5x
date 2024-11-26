@@ -173,7 +173,7 @@ time the sensor is powered up.</p>
 <p>Following example code shows how to use this driver with a Sensirion SEN5x
 connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">from</span> <span class="nn">sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
+<span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
 <span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_driver</span> <span class="kn">import</span> <span class="n">I2cTransceiver</span><span class="p">,</span><span class="n">I2cConnection</span>
 <span class="kn">import</span> <span class="nn">board</span>
 
@@ -226,7 +226,7 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).</p>
 connected to a Linux I²C bus (e.g. Raspberry Pi).</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_driver</span> <span class="kn">import</span> <span class="n">I2cConnection</span><span class="p">,</span> <span class="n">LinuxI2cTransceiver</span>
-<span class="kn">from</span> <span class="nn">sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
+<span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
 
 
 <span class="k">with</span> <span class="n">LinuxI2cTransceiver</span><span class="p">(</span><span class="s1">&#39;/dev/i2c-1&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">i2c_transceiver</span><span class="p">:</span>
@@ -277,7 +277,7 @@ for the SensorBridge can be installed with
 <span class="kn">from</span> <span class="nn">sensirion_shdlc_sensorbridge</span> <span class="kn">import</span> <span class="n">SensorBridgePort</span><span class="p">,</span> \
     <span class="n">SensorBridgeShdlcDevice</span><span class="p">,</span> <span class="n">SensorBridgeI2cProxy</span>
 <span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_driver</span> <span class="kn">import</span> <span class="n">I2cConnection</span>
-<span class="kn">from</span> <span class="nn">sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
+<span class="kn">from</span> <span class="nn">circuitpython_sensirion_i2c_sen5x</span> <span class="kn">import</span> <span class="n">Sen5xI2cDevice</span>
 
 <span class="c1"># Connect to the SensorBridge with default settings:</span>
 <span class="c1">#  - baudrate:      460800</span>

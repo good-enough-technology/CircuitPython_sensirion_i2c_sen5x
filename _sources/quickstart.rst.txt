@@ -15,7 +15,7 @@ connected to a CircuitPython I²C bus (e.g. Adafruit Qt-Py ESP32s2).
 .. sourcecode:: python
 
     import time
-    from sensirion_i2c_sen5x import Sen5xI2cDevice
+    from circuitpython_sensirion_i2c_sen5x import Sen5xI2cDevice
     from circuitpython_sensirion_i2c_driver import I2cTransceiver,I2cConnection
     import board
     
@@ -72,7 +72,7 @@ connected to a Linux I²C bus (e.g. Raspberry Pi).
 
     import time
     from circuitpython_sensirion_i2c_driver import I2cConnection, LinuxI2cTransceiver
-    from sensirion_i2c_sen5x import Sen5xI2cDevice
+    from circuitpython_sensirion_i2c_sen5x import Sen5xI2cDevice
 
 
     with LinuxI2cTransceiver('/dev/i2c-1') as i2c_transceiver:
@@ -127,7 +127,7 @@ for the SensorBridge can be installed with
     from sensirion_shdlc_sensorbridge import SensorBridgePort, \
         SensorBridgeShdlcDevice, SensorBridgeI2cProxy
     from circuitpython_sensirion_i2c_driver import I2cConnection
-    from sensirion_i2c_sen5x import Sen5xI2cDevice
+    from circuitpython_sensirion_i2c_sen5x import Sen5xI2cDevice
 
     # Connect to the SensorBridge with default settings:
     #  - baudrate:      460800
