@@ -77,7 +77,7 @@ class Sen5xI2cCmdReadMeasuredValues(ReadMeasuredValuesGenerated):
         :return:
             Object containing all measured values.
         :rtype:
-            ~sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues
+            ~circuitpython_sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues
         :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
@@ -257,7 +257,7 @@ class Sen5xI2cCmdGetVersion(GetVersionGenerated):
         :return:
             The device version as an object.
         :rtype:
-            ~sensirion_i2c_sen5x.response_types.Sen5xVersion
+            ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xVersion
         :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
@@ -305,7 +305,7 @@ class Sen5xI2cCmdReadDeviceStatus(ReadDeviceStatusGenerated):
         :return:
             Device status as an object.
         :rtype:
-            ~sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
+            ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
         :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
@@ -331,7 +331,7 @@ class Sen5xI2cCmdReadAndClearDeviceStatus(ReadAndClearDeviceStatusGenerated):
         :return:
             Device status as an object.
         :rtype:
-            ~sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
+            ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
         :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """

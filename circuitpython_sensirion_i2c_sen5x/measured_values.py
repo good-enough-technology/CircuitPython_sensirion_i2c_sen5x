@@ -57,35 +57,35 @@ class Sen5xMeasuredValues:
         self.values = values
 
         #: Mass concentration PM1.0
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
         self.mass_concentration_1p0 = Sen5xMassConcentration(values[0])
 
         #: Mass concentration PM2.5
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
         self.mass_concentration_2p5 = Sen5xMassConcentration(values[1])
 
         #: Mass concentration PM4.0
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
         self.mass_concentration_4p0 = Sen5xMassConcentration(values[2])
 
         #: Mass concentration PM10.0
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xMassConcentration`).
         self.mass_concentration_10p0 = Sen5xMassConcentration(values[3])
 
         #: Ambient humidity
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xHumidity`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xHumidity`).
         self.ambient_humidity = Sen5xHumidity(values[4])
 
         #: Ambient temperature
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xTemperature`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xTemperature`).
         self.ambient_temperature = Sen5xTemperature(values[5])
 
         #: VOC index
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex`).
         self.voc_index = Sen5xAirQualityIndex(values[6])
 
         #: NOx index
-        #: (:py:class:`~sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex`).
+        #: (:py:class:`~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex`).
         self.nox_index = Sen5xAirQualityIndex(values[7])
 
     def to_str(self, separator="\n"):

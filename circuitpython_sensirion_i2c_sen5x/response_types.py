@@ -274,11 +274,11 @@ class Sen5xVersion:
         """
         Constructor.
 
-        :param ~sensirion_i2c_sen5x.response_types.Sen5xFirmwareVersion firmware:
+        :param ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xFirmwareVersion firmware:
             Firmware version.
-        :param ~sensirion_i2c_sen5x.response_types.Sen5xHardwareVersion hardware:
+        :param ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xHardwareVersion hardware:
             Hardware version.
-        :param ~sensirion_i2c_sen5x.response_types.Sen5xProtocolVersion protocol:
+        :param ~circuitpython_sensirion_i2c_sen5x.response_types.Sen5xProtocolVersion protocol:
             SHDLC protocol version.
         """
         super(Sen5xVersion, self).__init__()
