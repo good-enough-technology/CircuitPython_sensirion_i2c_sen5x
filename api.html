@@ -1,23 +1,23 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>API Reference &mdash; circuitpython-sensirion-i2c-sen5x 0.1.2 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+
   
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=92734c54"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=92734c54"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,9 +35,6 @@
           <a href="index.html" class="icon icon-home">
             circuitpython-sensirion-i2c-sen5x
           </a>
-              <div class="version">
-                0.1.2
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -50,146 +47,44 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-sensirion_i2c_sen5x.device">Sen5xI2cDevice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sen5xmeasuredvalues">Sen5xMeasuredValues</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues"><code class="docutils literal notranslate"><span class="pre">Sen5xMeasuredValues</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#sen5xi2cdevice">Sen5xI2cDevice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sen5xmeasuredvalues">Sen5xMeasuredValues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#response-data-types">Response Data Types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xmassconcentration">Sen5xMassConcentration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xMassConcentration"><code class="docutils literal notranslate"><span class="pre">Sen5xMassConcentration</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xhumidity">Sen5xHumidity</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xHumidity"><code class="docutils literal notranslate"><span class="pre">Sen5xHumidity</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xtemperature">Sen5xTemperature</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xTemperature"><code class="docutils literal notranslate"><span class="pre">Sen5xTemperature</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xairqualityindex">Sen5xAirQualityIndex</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex"><code class="docutils literal notranslate"><span class="pre">Sen5xAirQualityIndex</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xdevicestatus">Sen5xDeviceStatus</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus"><code class="docutils literal notranslate"><span class="pre">Sen5xDeviceStatus</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sen5xversion">Sen5xVersion</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xVersion"><code class="docutils literal notranslate"><span class="pre">Sen5xVersion</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xFirmwareVersion"><code class="docutils literal notranslate"><span class="pre">Sen5xFirmwareVersion</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xHardwareVersion"><code class="docutils literal notranslate"><span class="pre">Sen5xHardwareVersion</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.response_types.Sen5xProtocolVersion"><code class="docutils literal notranslate"><span class="pre">Sen5xProtocolVersion</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xmassconcentration">Sen5xMassConcentration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xhumidity">Sen5xHumidity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xtemperature">Sen5xTemperature</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xairqualityindex">Sen5xAirQualityIndex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xdevicestatus">Sen5xDeviceStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sen5xversion">Sen5xVersion</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cmdstartmeasurement">CmdStartMeasurement</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurement"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdStartMeasurement</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdstartmeasurementwithoutpm">CmdStartMeasurementWithoutPm</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurementWithoutPm"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdStartMeasurementWithoutPm</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdstopmeasurement">CmdStopMeasurement</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStopMeasurement"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdStopMeasurement</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdreaddataready">CmdReadDataReady</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDataReady"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdReadDataReady</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdreadmeasuredvalues">CmdReadMeasuredValues</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadMeasuredValues"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdReadMeasuredValues</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgettemperatureoffsetparameters">CmdGetTemperatureOffsetParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetTemperatureOffsetParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetTemperatureOffsetParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsettemperatureoffsetparameters">CmdSetTemperatureOffsetParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetTemperatureOffsetParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetTemperatureOffsetParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetwarmstartparameter">CmdGetWarmStartParameter</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetWarmStartParameter"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetWarmStartParameter</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetwarmstartparameter">CmdSetWarmStartParameter</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetWarmStartParameter"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetWarmStartParameter</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetrhtaccelerationmode">CmdGetRhtAccelerationMode</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetRhtAccelerationMode"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetRhtAccelerationMode</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetrhtaccelerationmode">CmdSetRhtAccelerationMode</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetRhtAccelerationMode"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetRhtAccelerationMode</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetvocalgorithmtuningparameters">CmdGetVocAlgorithmTuningParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmTuningParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetVocAlgorithmTuningParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetvocalgorithmtuningparameters">CmdSetVocAlgorithmTuningParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmTuningParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetVocAlgorithmTuningParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetnoxalgorithmtuningparameters">CmdGetNoxAlgorithmTuningParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetNoxAlgorithmTuningParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetNoxAlgorithmTuningParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetnoxalgorithmtuningparameters">CmdSetNoxAlgorithmTuningParameters</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetNoxAlgorithmTuningParameters"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetNoxAlgorithmTuningParameters</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetvocalgorithmstate">CmdGetVocAlgorithmState</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmState"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetVocAlgorithmState</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetvocalgorithmstate">CmdSetVocAlgorithmState</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmState"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetVocAlgorithmState</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdstartfancleaning">CmdStartFanCleaning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartFanCleaning"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdStartFanCleaning</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetfanautocleaninginterval">CmdGetFanAutoCleaningInterval</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetFanAutoCleaningInterval"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetFanAutoCleaningInterval</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdsetfanautocleaninginterval">CmdSetFanAutoCleaningInterval</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetFanAutoCleaningInterval"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdSetFanAutoCleaningInterval</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetproductname">CmdGetProductName</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetProductName"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetProductName</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetserialnumber">CmdGetSerialNumber</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetSerialNumber"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetSerialNumber</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdgetversion">CmdGetVersion</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetVersion"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdGetVersion</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdreaddevicestatus">CmdReadDeviceStatus</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDeviceStatus"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdReadDeviceStatus</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmdreadandcleardevicestatus">CmdReadAndClearDeviceStatus</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadAndClearDeviceStatus"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdReadAndClearDeviceStatus</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmddevicereset">CmdDeviceReset</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdDeviceReset"><code class="docutils literal notranslate"><span class="pre">Sen5xI2cCmdDeviceReset</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdstartmeasurement">CmdStartMeasurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdstartmeasurementwithoutpm">CmdStartMeasurementWithoutPm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdstopmeasurement">CmdStopMeasurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdreaddataready">CmdReadDataReady</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdreadmeasuredvalues">CmdReadMeasuredValues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgettemperatureoffsetparameters">CmdGetTemperatureOffsetParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsettemperatureoffsetparameters">CmdSetTemperatureOffsetParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetwarmstartparameter">CmdGetWarmStartParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetwarmstartparameter">CmdSetWarmStartParameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetrhtaccelerationmode">CmdGetRhtAccelerationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetrhtaccelerationmode">CmdSetRhtAccelerationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetvocalgorithmtuningparameters">CmdGetVocAlgorithmTuningParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetvocalgorithmtuningparameters">CmdSetVocAlgorithmTuningParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetnoxalgorithmtuningparameters">CmdGetNoxAlgorithmTuningParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetnoxalgorithmtuningparameters">CmdSetNoxAlgorithmTuningParameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetvocalgorithmstate">CmdGetVocAlgorithmState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetvocalgorithmstate">CmdSetVocAlgorithmState</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdstartfancleaning">CmdStartFanCleaning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetfanautocleaninginterval">CmdGetFanAutoCleaningInterval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdsetfanautocleaninginterval">CmdSetFanAutoCleaningInterval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetproductname">CmdGetProductName</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetserialnumber">CmdGetSerialNumber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdgetversion">CmdGetVersion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdreaddevicestatus">CmdReadDeviceStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmdreadandcleardevicestatus">CmdReadAndClearDeviceStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cmddevicereset">CmdDeviceReset</a></li>
 </ul>
 </li>
 </ul>
@@ -222,489 +117,112 @@
              
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
-<section id="module-sensirion_i2c_sen5x.device">
-<span id="sen5xi2cdevice"></span><h2>Sen5xI2cDevice<a class="headerlink" href="#module-sensirion_i2c_sen5x.device" title="Link to this heading"></a></h2>
+<section id="sen5xi2cdevice">
+<h2>Sen5xI2cDevice<a class="headerlink" href="#sen5xi2cdevice" title="Link to this heading"></a></h2>
 </section>
 <section id="sen5xmeasuredvalues">
 <h2>Sen5xMeasuredValues<a class="headerlink" href="#sen5xmeasuredvalues" title="Link to this heading"></a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.measured_values.</span></span><span class="sig-name descname"><span class="pre">Sen5xMeasuredValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/measured_values.html#Sen5xMeasuredValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x measurement response for the “Read Measured Values”
-command.</p>
-</dd></dl>
-
 </section>
 <section id="response-data-types">
 <h2>Response Data Types<a class="headerlink" href="#response-data-types" title="Link to this heading"></a></h2>
 <section id="sen5xmassconcentration">
 <h3>Sen5xMassConcentration<a class="headerlink" href="#sen5xmassconcentration" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xMassConcentration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xMassConcentration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xMassConcentration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xMassConcentration" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x measurement response for the particulate matter mass
-concentration.</p>
-<p>With the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ticks</span></code> attribute you can access the raw data as received
-from the device. For the converted physical value the <code class="xref py py-attr docutils literal notranslate"><span class="pre">physical</span></code>
-attribute is available. The attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">available</span></code> can be used to
-check whether the value is available or not.</p>
-</dd></dl>
-
 </section>
 <section id="sen5xhumidity">
 <h3>Sen5xHumidity<a class="headerlink" href="#sen5xhumidity" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xHumidity">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xHumidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xHumidity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xHumidity" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x measurement response for the humidity.</p>
-<p>With the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ticks</span></code> attribute you can access the raw data as received
-from the device. For the converted value the <code class="xref py py-attr docutils literal notranslate"><span class="pre">percent_rh</span></code>
-attribute is available. The attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">available</span></code> can be used to
-check whether the value is available or not.</p>
-</dd></dl>
-
 </section>
 <section id="sen5xtemperature">
 <h3>Sen5xTemperature<a class="headerlink" href="#sen5xtemperature" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xTemperature">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xTemperature" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x measurement response for the temperature.</p>
-<p>With the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ticks</span></code> attribute you can access the raw data as received
-from the device. For the converted values you can choose between
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">degrees_celsius</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">degrees_fahrenheit</span></code>. The
-attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">available</span></code> can be used to check whether the value is
-available or not.</p>
-</dd></dl>
-
 </section>
 <section id="sen5xairqualityindex">
 <h3>Sen5xAirQualityIndex<a class="headerlink" href="#sen5xairqualityindex" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xAirQualityIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xAirQualityIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xAirQualityIndex" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x measurement response for the air quality index.</p>
-<p>With the <code class="xref py py-attr docutils literal notranslate"><span class="pre">ticks</span></code> attribute you can access the raw data as received
-from the device. For the converted value the <code class="xref py py-attr docutils literal notranslate"><span class="pre">scaled</span></code> attribute is
-available. The attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">available</span></code> can be used to check whether
-the value is available or not.</p>
-</dd></dl>
-
 </section>
 <section id="sen5xdevicestatus">
 <h3>Sen5xDeviceStatus<a class="headerlink" href="#sen5xdevicestatus" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xDeviceStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xDeviceStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus" title="Link to this definition"></a></dt>
-<dd><p>Represents a SEN5x device status response.</p>
-<p>With the <code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code> attribute you can access the raw value as
-received from the device. The convenience attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">flags</span></code>
-allows you to get all set flags as strings. In addition, each flag is
-provided as separate bool attribute.</p>
-</dd></dl>
-
 </section>
 <section id="sen5xversion">
 <h3>Sen5xVersion<a class="headerlink" href="#sen5xversion" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xVersion">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">firmware</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hardware</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xVersion" title="Link to this definition"></a></dt>
-<dd><p>Class representing all version numbers of an I2C device. This is used for
-the “Get Version” command.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xFirmwareVersion">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xFirmwareVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xFirmwareVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xFirmwareVersion" title="Link to this definition"></a></dt>
-<dd><p>Class representing the firmware version of a device.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xHardwareVersion">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xHardwareVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xHardwareVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xHardwareVersion" title="Link to this definition"></a></dt>
-<dd><p>Class representing the hardware version of a device.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.response_types.Sen5xProtocolVersion">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.response_types.</span></span><span class="sig-name descname"><span class="pre">Sen5xProtocolVersion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">major</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/response_types.html#Sen5xProtocolVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.response_types.Sen5xProtocolVersion" title="Link to this definition"></a></dt>
-<dd><p>Class representing the I2C protocol version of an I2C device.</p>
-</dd></dl>
-
 </section>
 </section>
 <section id="commands">
 <h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
 <section id="cmdstartmeasurement">
 <h3>CmdStartMeasurement<a class="headerlink" href="#cmdstartmeasurement" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdStartMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdStartMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurement" title="Link to this definition"></a></dt>
-<dd><p>Start Measurement I²C Command</p>
-<p>Starts a continuous measurement.</p>
-<p>After starting the measurement, it takes some time (~1s) until the first
-measurement results are available. You could poll with the command 0x0202
-“Read Data Ready” to check when the results are ready to read.</p>
-<p>If the device is in measure mode without PM and the firmware version is
-higher than 1.0, this command enables PM measurement without affecting the
-already running RH/T/VOC/NOx measurements (except that the “data
-ready”-flag will be cleared). If the device is in idle mode, this command
-starts the normal measurement. In any other case (e.g. normal measure mode
-already running), this command has no effect.</p>
-</dd></dl>
-
 </section>
 <section id="cmdstartmeasurementwithoutpm">
 <h3>CmdStartMeasurementWithoutPm<a class="headerlink" href="#cmdstartmeasurementwithoutpm" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurementWithoutPm">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdStartMeasurementWithoutPm</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdStartMeasurementWithoutPm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartMeasurementWithoutPm" title="Link to this definition"></a></dt>
-<dd><p>Start Measurement Without PM I²C Command</p>
-<p>Starts a continuous measurement without PM. Only humidity, temperature, VOC
-and NOx are available in this mode. Laser and fan are switched off to keep
-power consumption low.</p>
-<p>After starting the measurement, it takes some time (~1s) until the first
-measurement results are available. You could poll with the command 0x0202
-“Read Data Ready” to check when the results are ready to read.</p>
-<p>If the device is in the normal measure mode and the firmware version is
-higher than 1.0, this command disables PM measurement without affecting the
-already running RH/T/VOC/NOx measurements (except that the “data
-ready”-flag will be cleared). If the device is in idle mode, this command
-starts the measurement without PM. In any other case (e.g. measure mode
-without PM already running), this command has no effect.</p>
-</dd></dl>
-
 </section>
 <section id="cmdstopmeasurement">
 <h3>CmdStopMeasurement<a class="headerlink" href="#cmdstopmeasurement" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStopMeasurement">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdStopMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdStopMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStopMeasurement" title="Link to this definition"></a></dt>
-<dd><p>Stop Measurement I²C Command</p>
-<p>Stops the measurement and returns to idle mode.</p>
-<p>If the device is already in idle mode, this command has no effect.</p>
-</dd></dl>
-
 </section>
 <section id="cmdreaddataready">
 <h3>CmdReadDataReady<a class="headerlink" href="#cmdreaddataready" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDataReady">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdReadDataReady</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdReadDataReady"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDataReady" title="Link to this definition"></a></dt>
-<dd><p>Read Data Ready I²C Command</p>
-<p>This command can be used to check if new measurement results are ready to
-read. The data ready flag is automatically reset after reading the
-measurement values with the 0x03.. “Read Measured Values” commands.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>During fan (auto-)cleaning, no measurement data is available for
-several seconds and thus this flag will not be set until cleaning
-has finished. So please expect gaps of several seconds at any
-time if fan auto-cleaning is enabled.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdreadmeasuredvalues">
 <h3>CmdReadMeasuredValues<a class="headerlink" href="#cmdreadmeasuredvalues" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadMeasuredValues">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdReadMeasuredValues</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdReadMeasuredValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadMeasuredValues" title="Link to this definition"></a></dt>
-<dd><p>Read Measured Values I²C Command</p>
-<p>Returns the measured values.</p>
-<p>The command 0x0202 “Read Data Ready” can be used to check if new data is
-available since the last read operation. If no new data is available, the
-previous values will be returned again.</p>
-</dd></dl>
-
 </section>
 <section id="cmdgettemperatureoffsetparameters">
 <h3>CmdGetTemperatureOffsetParameters<a class="headerlink" href="#cmdgettemperatureoffsetparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetTemperatureOffsetParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetTemperatureOffsetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdGetTemperatureOffsetParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetTemperatureOffsetParameters" title="Link to this definition"></a></dt>
-<dd><p>Get Temperature Offset Parameters I²C Command</p>
-<p>Gets the temperature offset parameters from the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsettemperatureoffsetparameters">
 <h3>CmdSetTemperatureOffsetParameters<a class="headerlink" href="#cmdsettemperatureoffsetparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetTemperatureOffsetParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetTemperatureOffsetParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_constant</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdSetTemperatureOffsetParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetTemperatureOffsetParameters" title="Link to this definition"></a></dt>
-<dd><p>Set Temperature Offset Parameters I²C Command</p>
-<p>Sets the temperature offset parameters for the device.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This configuration is volatile, i.e. the parameters will be
-reverted to their default value of zero after a device reset.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetwarmstartparameter">
 <h3>CmdGetWarmStartParameter<a class="headerlink" href="#cmdgetwarmstartparameter" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetWarmStartParameter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetWarmStartParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdGetWarmStartParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetWarmStartParameter" title="Link to this definition"></a></dt>
-<dd><p>Get Warm Start Parameter I²C Command</p>
-<p>Gets the warm start parameter from the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetwarmstartparameter">
 <h3>CmdSetWarmStartParameter<a class="headerlink" href="#cmdsetwarmstartparameter" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetWarmStartParameter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetWarmStartParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">warm_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdSetWarmStartParameter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdSetWarmStartParameter" title="Link to this definition"></a></dt>
-<dd><p>Set Warm Start Parameter I²C Command</p>
-<p>Sets the warm start parameter for the device.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter can be changed in any state of the device (and the
-getter immediately returns the new value), but it is applied only
-the next time starting a measurement, i.e. when sending a “Start
-Measurement” command! So the parameter needs to be set <em>before</em> a
-warm-start measurement is started.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This configuration is volatile, i.e. the parameter will be
-reverted to its default value of zero after a device reset.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetrhtaccelerationmode">
 <h3>CmdGetRhtAccelerationMode<a class="headerlink" href="#cmdgetrhtaccelerationmode" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetRhtAccelerationMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetRhtAccelerationMode</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetRhtAccelerationMode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetRhtAccelerationMode" title="Link to this definition"></a></dt>
-<dd><p>Get RH/T Acceleration Mode I²C Command</p>
-<p>Gets the RH/T acceleration mode.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetrhtaccelerationmode">
 <h3>CmdSetRhtAccelerationMode<a class="headerlink" href="#cmdsetrhtaccelerationmode" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetRhtAccelerationMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetRhtAccelerationMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdSetRhtAccelerationMode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetRhtAccelerationMode" title="Link to this definition"></a></dt>
-<dd><p>Set RH/T Acceleration Mode I²C Command</p>
-<p>Sets the RH/T acceleration mode.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This parameter can be changed in any state of the device (and the
-getter immediately returns the new value), but it is applied only
-the next time starting a measurement, i.e. when sending a “Start
-Measurement” command. So the parameter needs to be set <em>before</em> a
-new measurement is started.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetvocalgorithmtuningparameters">
 <h3>CmdGetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdgetvocalgorithmtuningparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmTuningParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetVocAlgorithmTuningParameters</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetVocAlgorithmTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmTuningParameters" title="Link to this definition"></a></dt>
-<dd><p>Get VOC Algorithm Tuning Parameters I²C Command</p>
-<p>Gets the currently set tuning parameters of the VOC algorithm.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetvocalgorithmtuningparameters">
 <h3>CmdSetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdsetvocalgorithmtuningparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmTuningParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetVocAlgorithmTuningParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdSetVocAlgorithmTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmTuningParameters" title="Link to this definition"></a></dt>
-<dd><p>Set VOC Algorithm Tuning Parameters I²C Command</p>
-<p>Sets the tuning parameters of the VOC algorithm.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command is available only in idle mode. In measure mode,
-this command has no effect. In addition, it has no effect if at
-least one parameter is outside the specified range.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetnoxalgorithmtuningparameters">
 <h3>CmdGetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdgetnoxalgorithmtuningparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetNoxAlgorithmTuningParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetNoxAlgorithmTuningParameters</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetNoxAlgorithmTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetNoxAlgorithmTuningParameters" title="Link to this definition"></a></dt>
-<dd><p>Get NOx Algorithm Tuning Parameters I²C Command</p>
-<p>Gets the currently set tuning parameters of the NOx algorithm.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetnoxalgorithmtuningparameters">
 <h3>CmdSetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdsetnoxalgorithmtuningparameters" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetNoxAlgorithmTuningParameters">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetNoxAlgorithmTuningParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdSetNoxAlgorithmTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetNoxAlgorithmTuningParameters" title="Link to this definition"></a></dt>
-<dd><p>Set NOx Algorithm Tuning Parameters I²C Command</p>
-<p>Sets the tuning parameters of the NOx algorithm.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command is available only in idle mode. In measure mode,
-this command has no effect. In addition, it has no effect if at
-least one parameter is outside the specified range.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetvocalgorithmstate">
 <h3>CmdGetVocAlgorithmState<a class="headerlink" href="#cmdgetvocalgorithmstate" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmState">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetVocAlgorithmState</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetVocAlgorithmState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetVocAlgorithmState" title="Link to this definition"></a></dt>
-<dd><p>Get VOC Algorithm State I²C Command</p>
-<p>Gets the current VOC algorithm state. This data can be used to restore the
-state with the “Set VOC Algorithm State” command after a short power cycle
-or device reset.</p>
-<p>This command can be used either in measure mode or in idle mode (which will
-then return the state at the time when the measurement was stopped). In
-measure mode, the state can be read each measure interval to always have
-the latest state available, even in case of a sudden power loss.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetvocalgorithmstate">
 <h3>CmdSetVocAlgorithmState<a class="headerlink" href="#cmdsetvocalgorithmstate" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmState">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetVocAlgorithmState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdSetVocAlgorithmState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetVocAlgorithmState" title="Link to this definition"></a></dt>
-<dd><p>Set VOC Algorithm State I²C Command</p>
-<p>Sets the VOC algorithm state previously received with the “Get VOC
-Algorithm State” command.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command is only available in idle mode and the state will be
-applied only once when starting the next measurement. Any further
-measurements (i.e. when stopping and restarting the measure mode)
-will reset the state to initial values. In measure mode, this
-command has no effect.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdstartfancleaning">
 <h3>CmdStartFanCleaning<a class="headerlink" href="#cmdstartfancleaning" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartFanCleaning">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdStartFanCleaning</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdStartFanCleaning"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdStartFanCleaning" title="Link to this definition"></a></dt>
-<dd><p>Start Fan Cleaning I²C Command</p>
-<p>Starts the fan cleaning manually. The “data ready”-flag will be cleared
-immediately and during the next few seconds, no new measurement results
-will be available (old values will be returned). Once the cleaning is
-finished, the “data ready”-flag will be set and new measurement results
-will be available.</p>
-<p>When executing this command while cleaning is already active, the command
-does nothing.</p>
-<p>If you stop the measurement while fan cleaning is active, the cleaning will
-be aborted immediately.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This command is only available in measure mode with PM
-measurement enabled, i.e. only if the fan is already running. In
-any other state, this command does nothing.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdgetfanautocleaninginterval">
 <h3>CmdGetFanAutoCleaningInterval<a class="headerlink" href="#cmdgetfanautocleaninginterval" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetFanAutoCleaningInterval">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetFanAutoCleaningInterval</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetFanAutoCleaningInterval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetFanAutoCleaningInterval" title="Link to this definition"></a></dt>
-<dd><p>Get Fan Auto Cleaning Interval I²C Command</p>
-<p>Gets the fan auto cleaning interval from the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdsetfanautocleaninginterval">
 <h3>CmdSetFanAutoCleaningInterval<a class="headerlink" href="#cmdsetfanautocleaninginterval" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetFanAutoCleaningInterval">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdSetFanAutoCleaningInterval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interval</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdSetFanAutoCleaningInterval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdSetFanAutoCleaningInterval" title="Link to this definition"></a></dt>
-<dd><p>Set Fan Auto Cleaning Interval I²C Command</p>
-<p>Sets the fan auto cleaning interval for the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdgetproductname">
 <h3>CmdGetProductName<a class="headerlink" href="#cmdgetproductname" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetProductName">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetProductName</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetProductName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetProductName" title="Link to this definition"></a></dt>
-<dd><p>Get Product Name I²C Command</p>
-<p>Gets the product name from the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdgetserialnumber">
 <h3>CmdGetSerialNumber<a class="headerlink" href="#cmdgetserialnumber" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetSerialNumber">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetSerialNumber</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdGetSerialNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdGetSerialNumber" title="Link to this definition"></a></dt>
-<dd><p>Get Serial Number I²C Command</p>
-<p>Gets the serial number from the device.</p>
-</dd></dl>
-
 </section>
 <section id="cmdgetversion">
 <h3>CmdGetVersion<a class="headerlink" href="#cmdgetversion" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetVersion">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdGetVersion</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdGetVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdGetVersion" title="Link to this definition"></a></dt>
-<dd><p>Get Version I²C Command</p>
-<p>Gets the version information for the hardware, firmware and communication
-protocol.</p>
-</dd></dl>
-
 </section>
 <section id="cmdreaddevicestatus">
 <h3>CmdReadDeviceStatus<a class="headerlink" href="#cmdreaddevicestatus" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDeviceStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdReadDeviceStatus</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdReadDeviceStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadDeviceStatus" title="Link to this definition"></a></dt>
-<dd><p>Read Device Status I²C Command</p>
-<p>Reads the current device status flags.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The status flags of type “Error” are sticky, i.e. they are not
-cleared automatically even if the error condition no longer
-exists. So they can only be cleared manually with the command
-0xD210 “Read And Clear Device Status” or with a device reset. All
-other flags are not sticky, i.e. they are cleared automatically
-if the trigger condition disappears.</p>
-</div>
-</dd></dl>
-
 </section>
 <section id="cmdreadandcleardevicestatus">
 <h3>CmdReadAndClearDeviceStatus<a class="headerlink" href="#cmdreadandcleardevicestatus" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadAndClearDeviceStatus">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.wrapped.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdReadAndClearDeviceStatus</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/wrapped.html#Sen5xI2cCmdReadAndClearDeviceStatus"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.wrapped.Sen5xI2cCmdReadAndClearDeviceStatus" title="Link to this definition"></a></dt>
-<dd><p>Read And Clear Device Status I²C Command</p>
-<p>Reads the current device status (like command 0xD206 “Read Device Status”)
-and afterwards clears all flags.</p>
-</dd></dl>
-
 </section>
 <section id="cmddevicereset">
 <h3>CmdDeviceReset<a class="headerlink" href="#cmddevicereset" title="Link to this heading"></a></h3>
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdDeviceReset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen5x.commands.generated.</span></span><span class="sig-name descname"><span class="pre">Sen5xI2cCmdDeviceReset</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen5x/commands/generated.html#Sen5xI2cCmdDeviceReset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen5x.commands.generated.Sen5xI2cCmdDeviceReset" title="Link to this definition"></a></dt>
-<dd><p>Device Reset I²C Command</p>
-<p>Executes a reset on the device. This has the same effect as a power cycle.</p>
-</dd></dl>
-
 </section>
 </section>
 </section>
@@ -719,7 +237,7 @@ and afterwards clears all flags.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+    <p>&#169; Copyright 2024 Sensirion AG, Switzerland.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
