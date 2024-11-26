@@ -35,7 +35,7 @@ setup(
     long_description=long_description,
     python_requires='>=3.5',
     install_requires=[
-        'circuitPython-sensirion-i2c-sen5x',
+        'sensirion-i2c-driver>=1.0.0,<2.0'
     ],
     extras_require={
         'test': [
