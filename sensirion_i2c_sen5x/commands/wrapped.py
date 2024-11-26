@@ -49,7 +49,7 @@ class Sen5xI2cCmdReadDataReady(ReadDataReadyGenerated):
             ``True`` if data is ready, ``False`` if not.
             When no measurement is running, ``False`` will be returned.
         :rtype: bool
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         padding, data_ready = ReadDataReadyGenerated.interpret_response(self, data)
@@ -78,7 +78,7 @@ class Sen5xI2cCmdReadMeasuredValues(ReadMeasuredValuesGenerated):
             Object containing all measured values.
         :rtype:
             ~sensirion_i2c_sen5x.measured_values.Sen5xMeasuredValues
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         values = ReadMeasuredValuesGenerated.interpret_response(self, data)
@@ -122,7 +122,7 @@ class Sen5xI2cCmdGetTemperatureOffsetParameters(GetTemperatureOffsetParametersGe
               After the specified value in seconds, 63% of the new slope and
               offset are applied.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         offset, slope, time_constant = \
@@ -200,7 +200,7 @@ class Sen5xI2cCmdGetWarmStartParameter(GetWarmStartParameterGenerated):
             Warm start parameter value.
         :rtype:
             float/int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         warm_start = GetWarmStartParameterGenerated.interpret_response(self, data)
@@ -258,7 +258,7 @@ class Sen5xI2cCmdGetVersion(GetVersionGenerated):
             The device version as an object.
         :rtype:
             ~sensirion_i2c_sen5x.response_types.Sen5xVersion
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         firmware_major, firmware_minor, firmware_debug, hardware_major, \
@@ -306,7 +306,7 @@ class Sen5xI2cCmdReadDeviceStatus(ReadDeviceStatusGenerated):
             Device status as an object.
         :rtype:
             ~sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         value = ReadDeviceStatusGenerated.interpret_response(self, data)
@@ -332,7 +332,7 @@ class Sen5xI2cCmdReadAndClearDeviceStatus(ReadAndClearDeviceStatusGenerated):
             Device status as an object.
         :rtype:
             ~sensirion_i2c_sen5x.response_types.Sen5xDeviceStatus
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         value = ReadAndClearDeviceStatusGenerated.interpret_response(self, data)

@@ -86,7 +86,7 @@ scv_whitelist_branches = ('master',)
 scv_grm_exclude = ('.gitignore', '.nojekyll')
 
 intersphinx_mapping = {
-    'sensirion_i2c_driver': (
+    'circuitpython_sensirion_i2c_driver': (
         'https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver/',
         None
     ),

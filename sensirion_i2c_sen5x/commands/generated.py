@@ -22,7 +22,7 @@
 # flake8: noqa
 
 # from __future__ import absolute_import, division, print_function
-from sensirion_i2c_driver import SensirionI2cCommand, CrcCalculator
+from circuitpython_sensirion_i2c_driver import SensirionI2cCommand, CrcCalculator
 from struct import pack, unpack
 
 import sys
@@ -218,7 +218,7 @@ class Sen5xI2cCmdReadDataReady(Sen5xI2cCmdBase):
               True (0x01) if data is ready, False (0x00) if not. When no
               measurement is running, False will be returned.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -302,7 +302,7 @@ class Sen5xI2cCmdReadMeasuredValues(Sen5xI2cCmdBase):
               first 10..11 seconds after power-on or device reset, this value
               will be 0x7FFF as well.*
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -401,7 +401,7 @@ class Sen5xI2cCmdGetTemperatureOffsetParameters(Sen5xI2cCmdBase):
               After the specified value in seconds, 63% of the new slope and
               offset are applied.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -482,7 +482,7 @@ class Sen5xI2cCmdGetWarmStartParameter(Sen5xI2cCmdBase):
         :return: Warm start behavior as a value in the range from 0 (cold
                  start) to 65535 (warm start).
         :rtype: int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -572,7 +572,7 @@ class Sen5xI2cCmdGetVocAlgorithmTuningParameters(Sen5xI2cCmdBase):
             - gain_factor (int) -
               Gain factor to amplify or to attenuate the VOC index output.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -697,7 +697,7 @@ class Sen5xI2cCmdGetNoxAlgorithmTuningParameters(Sen5xI2cCmdBase):
             - gain_factor (int) -
               Gain factor to amplify or to attenuate the NOx index output.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -803,7 +803,7 @@ class Sen5xI2cCmdGetRhtAccelerationMode(Sen5xI2cCmdBase):
             Received raw bytes from the read operation.
         :return: The current RH/T acceleration mode.
         :rtype: int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -880,7 +880,7 @@ class Sen5xI2cCmdGetVocAlgorithmState(Sen5xI2cCmdBase):
             Received raw bytes from the read operation.
         :return: Current VOC algorithm state.
         :rtype: bytes
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -952,7 +952,7 @@ class Sen5xI2cCmdGetFanAutoCleaningInterval(Sen5xI2cCmdBase):
         :return: Fan auto cleaning interval [s]. Zero means auto cleaning is
                  disabled.
         :rtype: int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -1018,7 +1018,7 @@ class Sen5xI2cCmdGetProductName(Sen5xI2cCmdBase):
         :return: Null-terminated ASCII string containing the product name. Up
                  to 32 characters can be read from the device.
         :rtype: str
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -1059,7 +1059,7 @@ class Sen5xI2cCmdGetSerialNumber(Sen5xI2cCmdBase):
         :return: Null-terminated ASCII string containing the serial number. Up
                  to 32 characters can be read from the device.
         :rtype: str
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -1117,7 +1117,7 @@ class Sen5xI2cCmdGetVersion(Sen5xI2cCmdBase):
             - padding (int) -
               Padding byte, ignore this.
         :rtype: tuple
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -1187,7 +1187,7 @@ class Sen5xI2cCmdReadDeviceStatus(Sen5xI2cCmdBase):
         :return: Device status (32 flags as an integer value). For details,
                  please refer to the device status flags documentation.
         :rtype: int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs
@@ -1230,7 +1230,7 @@ class Sen5xI2cCmdReadAndClearDeviceStatus(Sen5xI2cCmdBase):
                  clearing it. For details, please refer to the device status
                  flags documentation.
         :rtype: int
-        :raise ~sensirion_i2c_driver.errors.I2cChecksumError:
+        :raise ~circuitpython_sensirion_i2c_driver.errors.I2cChecksumError:
             If a received CRC was wrong.
         """
         # check and remove CRCs

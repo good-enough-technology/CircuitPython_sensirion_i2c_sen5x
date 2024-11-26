@@ -4,8 +4,8 @@
 from sensirion_shdlc_driver import ShdlcSerialPort, ShdlcConnection
 from sensirion_shdlc_sensorbridge import SensorBridgePort, \
     SensorBridgeShdlcDevice, SensorBridgeI2cProxy
-from sensirion_i2c_driver import I2cConnection
-from sensirion_i2c_sen5x import Sen5xI2cDevice
+from circuitpython_sensirion_i2c_driver import I2cConnection
+from circuitpython_sensirion_i2c_sen5x import Sen5xI2cDevice
 import pytest
 
 

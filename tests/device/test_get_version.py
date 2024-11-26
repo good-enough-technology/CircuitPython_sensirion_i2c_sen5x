@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # (c) Copyright 2022 Sensirion AG, Switzerland
 
-from sensirion_i2c_sen5x import Sen5xVersion
+from circuitpython_sensirion_i2c_sen5x import Sen5xVersion
 import pytest
 
 

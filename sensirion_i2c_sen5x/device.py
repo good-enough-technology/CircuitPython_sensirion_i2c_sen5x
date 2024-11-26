@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # (c) Copyright 2022 Sensirion AG, Switzerland
 
-from sensirion_i2c_driver import I2cDevice
+from circuitpython_sensirion_i2c_driver import I2cDevice
 from .commands import \
     Sen5xI2cCmdDeviceReset, \
     Sen5xI2cCmdGetFanAutoCleaningInterval, \
@@ -57,7 +57,7 @@ class Sen5xI2cDevice(I2cDevice):
         """
         Constructs a new SEN5x I²C device.
 
-        :param ~sensirion_i2c_driver.connection.I2cConnection connection:
+        :param ~circuitpython_sensirion_i2c_driver.connection.I2cConnection connection:
             The I²C connection to use for communication.
         :param byte slave_address:
             The I²C slave address, defaults to 0x69.

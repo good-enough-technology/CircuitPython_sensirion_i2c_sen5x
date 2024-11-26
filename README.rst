@@ -12,7 +12,8 @@ etc.
 Installation and Usage
 ----------------------
 
-The user manual is available at https://sensirion.github.io/python-i2c-sen5x/.
+The user manual is available at 
+https://good-enough-technology.github.io/circuitpython-sensirion-i2c-sen5x/.
 
 
 Attribution

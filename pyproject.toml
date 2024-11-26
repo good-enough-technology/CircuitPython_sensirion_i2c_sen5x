@@ -14,5 +14,5 @@ documentation = "https://good-enough-technology.github.io/CircuitPython_sensirio
 
 [circup]
 circup_dependencies = [
-    "sensirion_i2c_driver"
+    "circuitpython_sensirion_i2c_driver"
 ]
