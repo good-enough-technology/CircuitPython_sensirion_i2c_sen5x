@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 
 
 # Read version number from version.py
-version_line = open("sensirion_i2c_sen5x/version.py", "rt").read()
+version_line = open("circuitpython_sensirion_i2c_sen5x/version.py", "rt").read()
 result = re.search(r"^version = ['\"]([^'\"]*)['\"]", version_line, re.M)
 if result:
     version_string = result.group(1)
