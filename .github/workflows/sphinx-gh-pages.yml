@@ -26,6 +26,8 @@ jobs:
           cache: "pip"
       - name: Install the project dependencies
         run: |
+          git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
+          pip install ./CircuitPython_sensirion_i2c_driver/
           python setup.py install
           python -m pip install -r docs/requirements.txt
       - name: Build documentation
