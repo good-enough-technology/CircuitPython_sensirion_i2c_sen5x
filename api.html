@@ -1,48 +1,91 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>API Reference &mdash; circuitpython-sensirion-i2c-sen5x 1.0.0 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+  
 
   
+  
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-      <script src="_static/jquery.js?v=5d32c60e"></script>
-      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=8d563738"></script>
-      <script src="_static/doctools.js?v=9bcbadda"></script>
-      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Quick Start" href="quickstart.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
           
+            <a href="index.html" class="icon icon-home"> circuitpython-sensirion-i2c-sen5x
           
-          <a href="index.html" class="icon icon-home">
-            circuitpython-sensirion-i2c-sen5x
+
+          
           </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
@@ -91,170 +134,225 @@
 </li>
 </ul>
 
+            
+          
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">circuitpython-sensirion-i2c-sen5x</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">API Reference</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Reference</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+            
             <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
-  <section id="api-reference">
-<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
-<section id="sen5xi2cdevice">
-<h2>Sen5xI2cDevice<a class="headerlink" href="#sen5xi2cdevice" title="Link to this heading"></a></h2>
-</section>
-<section id="sen5xmeasuredvalues">
-<h2>Sen5xMeasuredValues<a class="headerlink" href="#sen5xmeasuredvalues" title="Link to this heading"></a></h2>
-</section>
-<section id="response-data-types">
-<h2>Response Data Types<a class="headerlink" href="#response-data-types" title="Link to this heading"></a></h2>
-<section id="sen5xmassconcentration">
-<h3>Sen5xMassConcentration<a class="headerlink" href="#sen5xmassconcentration" title="Link to this heading"></a></h3>
-</section>
-<section id="sen5xhumidity">
-<h3>Sen5xHumidity<a class="headerlink" href="#sen5xhumidity" title="Link to this heading"></a></h3>
-</section>
-<section id="sen5xtemperature">
-<h3>Sen5xTemperature<a class="headerlink" href="#sen5xtemperature" title="Link to this heading"></a></h3>
-</section>
-<section id="sen5xairqualityindex">
-<h3>Sen5xAirQualityIndex<a class="headerlink" href="#sen5xairqualityindex" title="Link to this heading"></a></h3>
-</section>
-<section id="sen5xdevicestatus">
-<h3>Sen5xDeviceStatus<a class="headerlink" href="#sen5xdevicestatus" title="Link to this heading"></a></h3>
-</section>
-<section id="sen5xversion">
-<h3>Sen5xVersion<a class="headerlink" href="#sen5xversion" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
-<section id="cmdstartmeasurement">
-<h3>CmdStartMeasurement<a class="headerlink" href="#cmdstartmeasurement" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdstartmeasurementwithoutpm">
-<h3>CmdStartMeasurementWithoutPm<a class="headerlink" href="#cmdstartmeasurementwithoutpm" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdstopmeasurement">
-<h3>CmdStopMeasurement<a class="headerlink" href="#cmdstopmeasurement" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdreaddataready">
-<h3>CmdReadDataReady<a class="headerlink" href="#cmdreaddataready" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdreadmeasuredvalues">
-<h3>CmdReadMeasuredValues<a class="headerlink" href="#cmdreadmeasuredvalues" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgettemperatureoffsetparameters">
-<h3>CmdGetTemperatureOffsetParameters<a class="headerlink" href="#cmdgettemperatureoffsetparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsettemperatureoffsetparameters">
-<h3>CmdSetTemperatureOffsetParameters<a class="headerlink" href="#cmdsettemperatureoffsetparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetwarmstartparameter">
-<h3>CmdGetWarmStartParameter<a class="headerlink" href="#cmdgetwarmstartparameter" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetwarmstartparameter">
-<h3>CmdSetWarmStartParameter<a class="headerlink" href="#cmdsetwarmstartparameter" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetrhtaccelerationmode">
-<h3>CmdGetRhtAccelerationMode<a class="headerlink" href="#cmdgetrhtaccelerationmode" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetrhtaccelerationmode">
-<h3>CmdSetRhtAccelerationMode<a class="headerlink" href="#cmdsetrhtaccelerationmode" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetvocalgorithmtuningparameters">
-<h3>CmdGetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdgetvocalgorithmtuningparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetvocalgorithmtuningparameters">
-<h3>CmdSetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdsetvocalgorithmtuningparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetnoxalgorithmtuningparameters">
-<h3>CmdGetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdgetnoxalgorithmtuningparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetnoxalgorithmtuningparameters">
-<h3>CmdSetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdsetnoxalgorithmtuningparameters" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetvocalgorithmstate">
-<h3>CmdGetVocAlgorithmState<a class="headerlink" href="#cmdgetvocalgorithmstate" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetvocalgorithmstate">
-<h3>CmdSetVocAlgorithmState<a class="headerlink" href="#cmdsetvocalgorithmstate" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdstartfancleaning">
-<h3>CmdStartFanCleaning<a class="headerlink" href="#cmdstartfancleaning" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetfanautocleaninginterval">
-<h3>CmdGetFanAutoCleaningInterval<a class="headerlink" href="#cmdgetfanautocleaninginterval" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdsetfanautocleaninginterval">
-<h3>CmdSetFanAutoCleaningInterval<a class="headerlink" href="#cmdsetfanautocleaninginterval" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetproductname">
-<h3>CmdGetProductName<a class="headerlink" href="#cmdgetproductname" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetserialnumber">
-<h3>CmdGetSerialNumber<a class="headerlink" href="#cmdgetserialnumber" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdgetversion">
-<h3>CmdGetVersion<a class="headerlink" href="#cmdgetversion" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdreaddevicestatus">
-<h3>CmdReadDeviceStatus<a class="headerlink" href="#cmdreaddevicestatus" title="Link to this heading"></a></h3>
-</section>
-<section id="cmdreadandcleardevicestatus">
-<h3>CmdReadAndClearDeviceStatus<a class="headerlink" href="#cmdreadandcleardevicestatus" title="Link to this heading"></a></h3>
-</section>
-<section id="cmddevicereset">
-<h3>CmdDeviceReset<a class="headerlink" href="#cmddevicereset" title="Link to this heading"></a></h3>
-</section>
-</section>
-</section>
+            
+  <div class="section" id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sen5xi2cdevice">
+<h2>Sen5xI2cDevice<a class="headerlink" href="#sen5xi2cdevice" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="sen5xmeasuredvalues">
+<h2>Sen5xMeasuredValues<a class="headerlink" href="#sen5xmeasuredvalues" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="response-data-types">
+<h2>Response Data Types<a class="headerlink" href="#response-data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sen5xmassconcentration">
+<h3>Sen5xMassConcentration<a class="headerlink" href="#sen5xmassconcentration" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sen5xhumidity">
+<h3>Sen5xHumidity<a class="headerlink" href="#sen5xhumidity" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sen5xtemperature">
+<h3>Sen5xTemperature<a class="headerlink" href="#sen5xtemperature" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sen5xairqualityindex">
+<h3>Sen5xAirQualityIndex<a class="headerlink" href="#sen5xairqualityindex" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sen5xdevicestatus">
+<h3>Sen5xDeviceStatus<a class="headerlink" href="#sen5xdevicestatus" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="sen5xversion">
+<h3>Sen5xVersion<a class="headerlink" href="#sen5xversion" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cmdstartmeasurement">
+<h3>CmdStartMeasurement<a class="headerlink" href="#cmdstartmeasurement" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdstartmeasurementwithoutpm">
+<h3>CmdStartMeasurementWithoutPm<a class="headerlink" href="#cmdstartmeasurementwithoutpm" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdstopmeasurement">
+<h3>CmdStopMeasurement<a class="headerlink" href="#cmdstopmeasurement" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdreaddataready">
+<h3>CmdReadDataReady<a class="headerlink" href="#cmdreaddataready" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdreadmeasuredvalues">
+<h3>CmdReadMeasuredValues<a class="headerlink" href="#cmdreadmeasuredvalues" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgettemperatureoffsetparameters">
+<h3>CmdGetTemperatureOffsetParameters<a class="headerlink" href="#cmdgettemperatureoffsetparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsettemperatureoffsetparameters">
+<h3>CmdSetTemperatureOffsetParameters<a class="headerlink" href="#cmdsettemperatureoffsetparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetwarmstartparameter">
+<h3>CmdGetWarmStartParameter<a class="headerlink" href="#cmdgetwarmstartparameter" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetwarmstartparameter">
+<h3>CmdSetWarmStartParameter<a class="headerlink" href="#cmdsetwarmstartparameter" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetrhtaccelerationmode">
+<h3>CmdGetRhtAccelerationMode<a class="headerlink" href="#cmdgetrhtaccelerationmode" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetrhtaccelerationmode">
+<h3>CmdSetRhtAccelerationMode<a class="headerlink" href="#cmdsetrhtaccelerationmode" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetvocalgorithmtuningparameters">
+<h3>CmdGetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdgetvocalgorithmtuningparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetvocalgorithmtuningparameters">
+<h3>CmdSetVocAlgorithmTuningParameters<a class="headerlink" href="#cmdsetvocalgorithmtuningparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetnoxalgorithmtuningparameters">
+<h3>CmdGetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdgetnoxalgorithmtuningparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetnoxalgorithmtuningparameters">
+<h3>CmdSetNoxAlgorithmTuningParameters<a class="headerlink" href="#cmdsetnoxalgorithmtuningparameters" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetvocalgorithmstate">
+<h3>CmdGetVocAlgorithmState<a class="headerlink" href="#cmdgetvocalgorithmstate" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetvocalgorithmstate">
+<h3>CmdSetVocAlgorithmState<a class="headerlink" href="#cmdsetvocalgorithmstate" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdstartfancleaning">
+<h3>CmdStartFanCleaning<a class="headerlink" href="#cmdstartfancleaning" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetfanautocleaninginterval">
+<h3>CmdGetFanAutoCleaningInterval<a class="headerlink" href="#cmdgetfanautocleaninginterval" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdsetfanautocleaninginterval">
+<h3>CmdSetFanAutoCleaningInterval<a class="headerlink" href="#cmdsetfanautocleaninginterval" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetproductname">
+<h3>CmdGetProductName<a class="headerlink" href="#cmdgetproductname" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetserialnumber">
+<h3>CmdGetSerialNumber<a class="headerlink" href="#cmdgetserialnumber" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdgetversion">
+<h3>CmdGetVersion<a class="headerlink" href="#cmdgetversion" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdreaddevicestatus">
+<h3>CmdReadDeviceStatus<a class="headerlink" href="#cmdreaddevicestatus" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmdreadandcleardevicestatus">
+<h3>CmdReadAndClearDeviceStatus<a class="headerlink" href="#cmdreadandcleardevicestatus" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="cmddevicereset">
+<h3>CmdDeviceReset<a class="headerlink" href="#cmddevicereset" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
     </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024 Sensirion AG, Switzerland.</p>
-  </div>
+    <p>
+        &copy; Copyright 2024 Sensirion AG, Switzerland
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
