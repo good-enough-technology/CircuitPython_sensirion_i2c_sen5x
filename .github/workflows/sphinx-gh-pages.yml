@@ -5,47 +5,39 @@ on:
     branches:
       - master  # Replace with your default branch if it's not 'master'
   workflow_dispatch:
+    inputs:
+      run-environment:
+        description: OS to run check on
+        type: string
+        default: "ubuntu-20.04"
+      build-python-version:
+        description: Python version used for docs build
+        type: string
+        default: '3.6'
 
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
+  build_pages:
+    runs-on: ${{ inputs.run-environment || 'ubuntu-20.04' }}
     steps:
-    - name: Checkout Source
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10'  # Specify the Python version
-
-    - name: Install Dependencies
-      run: |
-        sudo apt-get install tree
-        python -m pip install --upgrade pip
-        # cd ${GITHUB_WORKSPACE}
-        pip install sphinx sphinx_rtd_theme
-        git clone https://github.com/good-enough-technology/CircuitPython_sensirion_i2c_driver
-        pip install ./CircuitPython_sensirion_i2c_driver/
-        pip install -r docs/requirements.txt
-        # Install any other dependencies here
-
-    - name: Install Package
-      run: |
-        pip install .
-
-    - name: Build Documentation
-      run: |
-        cd docs
-        make html
-        ls _build/html
-        tree _build/html
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        user_name: 'tyeth'
-        user_email: 'tyethgundry@googlemail.com'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/html
-
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.build-python-version || '3.6' }}
+          cache: "pip"
+      - name: Install the project dependencies
+        run: |
+          python setup.py install
+          python -m pip install -r docs/requirements.txt
+      - name: Build documentation
+        run: cd docs && make html
+      - name: Upload html artifact for debugging
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./docs/_build/html
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          user_name: 'tyeth'
+          user_email: 'tyethgundry@googlemail.com'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
