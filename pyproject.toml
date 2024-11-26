@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "circuitpython-sensirion-i2c-sen5x"
-version = "0.1.2"
+version = "1.0.0"
 description = "A CircuitPython driver for Sensirion SEN5x air quality devices. Fork of original python version by Sensirion."
 authors = ["Tyeth Gundry <tyethgundry@googlemail.com>", "Sensirion AG <info@sensirion.com>"]
 license = "MIT"
